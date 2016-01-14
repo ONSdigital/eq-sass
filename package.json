@@ -1,10 +1,8 @@
 {
   "name": "eq-sass",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "EQ Sass framework",
-  "scripts": {
-    "test": ""
-  },
+  "main": "eq-sass",
   "author": "ONS Digital",
   "license": "MIT",
   "bugs": {

@@ -14,19 +14,19 @@
 7 silly cache add   rawSpec: '.',
 7 silly cache add   spec: '/Users/hamishtaplin/Sites/eq-sass',
 7 silly cache add   type: 'directory' }
-8 verbose addLocalDirectory /Users/hamishtaplin/.npm/eq-sass/0.0.1/package.tgz not in flight; packing
-9 info lifecycle eq-sass@0.0.1~prepublish: eq-sass@0.0.1
-10 silly lifecycle eq-sass@0.0.1~prepublish: no script for prepublish, continuing
-11 verbose tar pack [ '/Users/hamishtaplin/.npm/eq-sass/0.0.1/package.tgz',
+8 verbose addLocalDirectory /Users/hamishtaplin/.npm/eq-sass/0.1.0/package.tgz not in flight; packing
+9 info lifecycle eq-sass@0.1.0~prepublish: eq-sass@0.1.0
+10 silly lifecycle eq-sass@0.1.0~prepublish: no script for prepublish, continuing
+11 verbose tar pack [ '/Users/hamishtaplin/.npm/eq-sass/0.1.0/package.tgz',
 11 verbose tar pack   '/Users/hamishtaplin/Sites/eq-sass' ]
-12 verbose tarball /Users/hamishtaplin/.npm/eq-sass/0.0.1/package.tgz
+12 verbose tarball /Users/hamishtaplin/.npm/eq-sass/0.1.0/package.tgz
 13 verbose folder /Users/hamishtaplin/Sites/eq-sass
-14 verbose addLocalTarball adding from inside cache /Users/hamishtaplin/.npm/eq-sass/0.0.1/package.tgz
-15 silly cache afterAdd eq-sass@0.0.1
-16 verbose afterAdd /Users/hamishtaplin/.npm/eq-sass/0.0.1/package/package.json not in flight; writing
-17 verbose afterAdd /Users/hamishtaplin/.npm/eq-sass/0.0.1/package/package.json written
+14 verbose addLocalTarball adding from inside cache /Users/hamishtaplin/.npm/eq-sass/0.1.0/package.tgz
+15 silly cache afterAdd eq-sass@0.1.0
+16 verbose afterAdd /Users/hamishtaplin/.npm/eq-sass/0.1.0/package/package.json not in flight; writing
+17 verbose afterAdd /Users/hamishtaplin/.npm/eq-sass/0.1.0/package/package.json written
 18 silly publish { name: 'eq-sass',
-18 silly publish   version: '0.0.1',
+18 silly publish   version: '0.1.0',
 18 silly publish   description: 'EQ Sass framework',
 18 silly publish   scripts: { test: '' },
 18 silly publish   author: { name: 'ONS Digital' },
@@ -37,9 +37,9 @@
 18 silly publish        url: 'https://github.com/ONSdigital/eq-sass.git' } ],
 18 silly publish   readme: '# Readme\n\nComing soon...\n',
 18 silly publish   readmeFilename: 'readme.md',
-18 silly publish   gitHead: '1c6c50be564d7102cd5e6ea1c0208bb50e8b9fff',
-18 silly publish   _id: 'eq-sass@0.0.1',
-18 silly publish   _shasum: 'e6faa4c8b4f13b26b7dab51a43fb358487cf584a',
+18 silly publish   gitHead: '3762581882d3907f7fba7b24768af09a90c15056',
+18 silly publish   _id: 'eq-sass@0.1.0',
+18 silly publish   _shasum: 'a29ed1e2bb166a26d923ea8412b972ea820a41c8',
 18 silly publish   _from: '.' }
 19 verbose getPublishConfig undefined
 20 silly mapToRegistry name eq-sass
@@ -47,28 +47,28 @@
 22 silly mapToRegistry registry https://registry.npmjs.org/
 23 silly mapToRegistry uri https://registry.npmjs.org/eq-sass
 24 verbose publish registryBase https://registry.npmjs.org/
-25 silly publish uploading /Users/hamishtaplin/.npm/eq-sass/0.0.1/package.tgz
+25 silly publish uploading /Users/hamishtaplin/.npm/eq-sass/0.1.0/package.tgz
 26 verbose request uri https://registry.npmjs.org/eq-sass
 27 verbose request sending authorization for write operation
-28 info attempt registry request try #1 at 3:11:43 PM
+28 info attempt registry request try #1 at 3:12:40 PM
 29 verbose request using bearer token for auth
-30 verbose request id 9cc09ecab44d080b
+30 verbose request id 7b176c719e9aca02
 31 http request PUT https://registry.npmjs.org/eq-sass
 32 http 403 https://registry.npmjs.org/eq-sass
 33 verbose headers { 'content-type': 'application/json',
 33 verbose headers   'cache-control': 'max-age=300',
 33 verbose headers   'content-length': '95',
 33 verbose headers   'accept-ranges': 'bytes',
-33 verbose headers   date: 'Thu, 14 Jan 2016 15:11:36 GMT',
+33 verbose headers   date: 'Thu, 14 Jan 2016 15:12:33 GMT',
 33 verbose headers   via: '1.1 varnish',
 33 verbose headers   connection: 'keep-alive',
-33 verbose headers   'x-served-by': 'cache-lcy1130-LCY',
+33 verbose headers   'x-served-by': 'cache-lcy1131-LCY',
 33 verbose headers   'x-cache': 'MISS',
 33 verbose headers   'x-cache-hits': '0',
-33 verbose headers   'x-timer': 'S1452784294.893738,VS0,VE1109' }
+33 verbose headers   'x-timer': 'S1452784352.038108,VS0,VE1049' }
 34 verbose request invalidating /Users/hamishtaplin/.npm/registry.npmjs.org/eq-sass on PUT
 35 error publish Failed PUT 403
-36 verbose stack Error: "You cannot publish over the previously published version 0.0.1." : eq-sass
+36 verbose stack Error: "You cannot publish over the previously published version 0.1.0." : eq-sass
 36 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
 36 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
 36 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
@@ -87,7 +87,7 @@
 42 error node v5.2.0
 43 error npm  v3.3.12
 44 error code E403
-45 error "You cannot publish over the previously published version 0.0.1." : eq-sass
+45 error "You cannot publish over the previously published version 0.1.0." : eq-sass
 46 error If you need help, you may report this error at:
 46 error     <https://github.com/npm/npm/issues>
 47 verbose exit [ 1, true ]
