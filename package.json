@@ -1,11 +1,19 @@
 {
   "name": "eq-sass",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "EQ Sass framework",
-  "main": "index.sass",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": ""
   },
   "author": "ONS Digital",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ONSdigital/eq-sass/issues"
+  },
+  "repository": [
+    {
+      "type": "git",
+      "url": "https://github.com/ONSdigital/eq-sass.git"
+    }
+  ]
 }
