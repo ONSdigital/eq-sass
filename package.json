@@ -1,0 +1,11 @@
+{
+  "name": "eq-sass",
+  "version": "1.0.0",
+  "description": "EQ Sass framework",
+  "main": "index.sass",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ONS Digital",
+  "license": "MIT"
+}
