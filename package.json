@@ -5,6 +5,13 @@
   "main": "eq-sass",
   "author": "ONS Digital",
   "license": "MIT",
+  "contributors": [
+    {
+      "name": "Hamish Taplin",
+      "email": "hello@hamishtaplin.com",
+      "web": "hamishtaplin.com"
+    }
+  ],
   "bugs": {
     "url": "https://github.com/ONSdigital/eq-sass/issues"
   },
