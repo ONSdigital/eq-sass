@@ -15,3 +15,4 @@ $grid-cols: 12 !default;
 $grid-gutters: 20px !default;
 // breakpoint for fixed width content
 $grid-bp-fixed: map-get($grid-bp, m) !default;
+$grid-use-letter-spacing-hack: false;

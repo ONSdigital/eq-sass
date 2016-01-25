@@ -1,6 +1,9 @@
 .grid {
-  letter-spacing: -0.32em;
-  /*word-spacing: -.43em;*/
+  @if $grid-use-letter-spacing-hack {
+    letter-spacing: -0.32em;
+  } @else {
+    font-size:0;
+  }
   margin-left: -$grid-gutters;
 }
 
@@ -86,9 +89,12 @@
   display: inline-block;
   width: 100%;
   vertical-align: top;
-  letter-spacing: normal;
-  word-spacing: normal;
-  // text-align: left;
+  @if $grid-use-letter-spacing-hack {
+    letter-spacing: normal;
+    word-spacing: normal;
+  } @else {
+    font-size: initial;
+  }
   padding-left: $grid-gutters;
   @each $bp, $size in $grid-bp {
     @include mq($from: $size) {
