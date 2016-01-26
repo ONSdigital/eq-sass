@@ -110,6 +110,10 @@
           position: relative;
           left: $width;
         }
+        &.#{$bp}-pull-#{$col} {
+          position: relative;
+          left: 0-$width;
+        }
       }
     }
   }
