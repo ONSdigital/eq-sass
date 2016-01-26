@@ -115,6 +115,10 @@
           left: 0-$width;
         }
       }
+      &.#{$bp}-nopull,
+      &.#{$bp}-nopush {
+        left: 0;
+      }
     }
   }
   .grid--float & {
