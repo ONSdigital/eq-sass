@@ -1,34 +1,31 @@
 .grid {
+  box-sizing: border-box;
   @if $grid-use-letter-spacing-hack {
     letter-spacing: -0.32em;
-  } @else {
-    font-size:0;
+  }
+  @else {
+    font-size: 0;
   }
   margin-left: -$grid-gutters;
 }
-
 .grid--float {
   letter-spacing: 0;
 }
-
 .grid--center {
   text-align: center;
   .grid__col {
     text-align: left;
   }
 }
-
 .grid--center-all {
   text-align: center;
 }
-
 .grid--reverse {
   direction: rtl;
   .grid__col {
     direction: ltr;
   }
 }
-
 .grid--spaced {
   .grid__col {
     margin-bottom: $grid-gutters;
@@ -39,13 +36,11 @@
     }
   }
 }
-
 .grid--align-mid {
   .grid__col {
     vertical-align: middle;
   }
 }
-
 .grid--stagger-align {
   .grid__col:nth-of-type(1n) {
     text-align: right;
@@ -54,21 +49,18 @@
     text-align: left;
   }
 }
-
 .grid--tight {
   margin-left: -1em;
   .grid__col {
     padding-left: 1em;
   }
 }
-
 .grid--gutterless {
   margin-left: 0;
   .grid__col {
     padding-left: 0;
   }
 }
-
 .grid--pixelgutter {
   margin-left: 1px;
   .grid__col {
@@ -76,7 +68,6 @@
     margin-bottom: 1px;
   }
 }
-
 .grid--flex {
   flex-wrap: wrap;
   display: flex;
@@ -84,38 +75,40 @@
     justify-content: center;
   }
 }
-
 .grid__col {
   display: inline-block;
   width: 100%;
   vertical-align: top;
+  box-sizing: border-box;
   @if $grid-use-letter-spacing-hack {
     letter-spacing: normal;
     word-spacing: normal;
-  } @else {
+  }
+  @else {
     font-size: initial;
   }
   padding-left: $grid-gutters;
   @each $bp, $size in $grid-bp {
     @include mq($from: $size) {
       @for $col from 1 through $grid-cols {
-
         $selector: #{$bp}-#{$col};
         $width: percentage($col / $grid-cols);
-
         @if $responsive {
           &.#{$selector} {
             width: $width;
             width: calc(100% / #{$grid-cols / $col});
           }
         }
-
         @else {
           @if ($size == $grid-bp-fixed) {
             &.#{$selector} {
               width: $width;
             }
           }
+        }
+        &.#{$bp}-push-#{$col} {
+          position: relative;
+          left: $width;
         }
       }
     }
@@ -125,7 +118,6 @@
     display: block;
   }
 }
-
 .grid__col--flex {
   display: flex;
 }

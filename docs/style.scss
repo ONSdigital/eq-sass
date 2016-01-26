@@ -1,0 +1,19 @@
+@import '../eq-sass';
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic);
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
