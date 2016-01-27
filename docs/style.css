@@ -42,9 +42,9 @@
   text-align: left; }
 
 .grid--tight {
-  margin-left: -1em; }
+  margin-left: -10px; }
   .grid--tight .grid__col {
-    padding-left: 1em; }
+    padding-left: 10px; }
 
 .grid--gutterless {
   margin-left: 0; }
@@ -59,7 +59,10 @@
 
 .grid--flex {
   flex-wrap: wrap;
+  flex-flow: row wrap;
   display: flex; }
+  .grid--flex .grid__col {
+    display: flex; }
   .grid--flex.grid--center {
     justify-content: center; }
 
@@ -68,12 +71,16 @@
   width: 100%;
   vertical-align: top;
   box-sizing: border-box;
+  background-clip: content-box;
   font-size: initial;
   padding-left: 20px; }
   @media only screen and (min-width: 300px) {
     .grid__col.xs-1 {
       width: 8.33333%;
       width: calc(100% / 12); }
+      .grid--flex .grid__col.xs-1 {
+        flex: 0 0 8.33333%;
+        max-width: 8.33333%; }
     .grid__col.xs-push-1 {
       position: relative;
       left: 8.33333%; }
@@ -83,6 +90,9 @@
     .grid__col.xs-2 {
       width: 16.66667%;
       width: calc(100% / 6); }
+      .grid--flex .grid__col.xs-2 {
+        flex: 0 0 16.66667%;
+        max-width: 16.66667%; }
     .grid__col.xs-push-2 {
       position: relative;
       left: 16.66667%; }
@@ -92,6 +102,9 @@
     .grid__col.xs-3 {
       width: 25%;
       width: calc(100% / 4); }
+      .grid--flex .grid__col.xs-3 {
+        flex: 0 0 25%;
+        max-width: 25%; }
     .grid__col.xs-push-3 {
       position: relative;
       left: 25%; }
@@ -101,6 +114,9 @@
     .grid__col.xs-4 {
       width: 33.33333%;
       width: calc(100% / 3); }
+      .grid--flex .grid__col.xs-4 {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%; }
     .grid__col.xs-push-4 {
       position: relative;
       left: 33.33333%; }
@@ -110,6 +126,9 @@
     .grid__col.xs-5 {
       width: 41.66667%;
       width: calc(100% / 2.4); }
+      .grid--flex .grid__col.xs-5 {
+        flex: 0 0 41.66667%;
+        max-width: 41.66667%; }
     .grid__col.xs-push-5 {
       position: relative;
       left: 41.66667%; }
@@ -119,6 +138,9 @@
     .grid__col.xs-6 {
       width: 50%;
       width: calc(100% / 2); }
+      .grid--flex .grid__col.xs-6 {
+        flex: 0 0 50%;
+        max-width: 50%; }
     .grid__col.xs-push-6 {
       position: relative;
       left: 50%; }
@@ -128,6 +150,9 @@
     .grid__col.xs-7 {
       width: 58.33333%;
       width: calc(100% / 1.71429); }
+      .grid--flex .grid__col.xs-7 {
+        flex: 0 0 58.33333%;
+        max-width: 58.33333%; }
     .grid__col.xs-push-7 {
       position: relative;
       left: 58.33333%; }
@@ -137,6 +162,9 @@
     .grid__col.xs-8 {
       width: 66.66667%;
       width: calc(100% / 1.5); }
+      .grid--flex .grid__col.xs-8 {
+        flex: 0 0 66.66667%;
+        max-width: 66.66667%; }
     .grid__col.xs-push-8 {
       position: relative;
       left: 66.66667%; }
@@ -146,6 +174,9 @@
     .grid__col.xs-9 {
       width: 75%;
       width: calc(100% / 1.33333); }
+      .grid--flex .grid__col.xs-9 {
+        flex: 0 0 75%;
+        max-width: 75%; }
     .grid__col.xs-push-9 {
       position: relative;
       left: 75%; }
@@ -155,6 +186,9 @@
     .grid__col.xs-10 {
       width: 83.33333%;
       width: calc(100% / 1.2); }
+      .grid--flex .grid__col.xs-10 {
+        flex: 0 0 83.33333%;
+        max-width: 83.33333%; }
     .grid__col.xs-push-10 {
       position: relative;
       left: 83.33333%; }
@@ -164,6 +198,9 @@
     .grid__col.xs-11 {
       width: 91.66667%;
       width: calc(100% / 1.09091); }
+      .grid--flex .grid__col.xs-11 {
+        flex: 0 0 91.66667%;
+        max-width: 91.66667%; }
     .grid__col.xs-push-11 {
       position: relative;
       left: 91.66667%; }
@@ -173,6 +210,9 @@
     .grid__col.xs-12 {
       width: 100%;
       width: calc(100% / 1); }
+      .grid--flex .grid__col.xs-12 {
+        flex: 0 0 100%;
+        max-width: 100%; }
     .grid__col.xs-push-12 {
       position: relative;
       left: 100%; }
@@ -185,6 +225,9 @@
     .grid__col.s-1 {
       width: 8.33333%;
       width: calc(100% / 12); }
+      .grid--flex .grid__col.s-1 {
+        flex: 0 0 8.33333%;
+        max-width: 8.33333%; }
     .grid__col.s-push-1 {
       position: relative;
       left: 8.33333%; }
@@ -194,6 +237,9 @@
     .grid__col.s-2 {
       width: 16.66667%;
       width: calc(100% / 6); }
+      .grid--flex .grid__col.s-2 {
+        flex: 0 0 16.66667%;
+        max-width: 16.66667%; }
     .grid__col.s-push-2 {
       position: relative;
       left: 16.66667%; }
@@ -203,6 +249,9 @@
     .grid__col.s-3 {
       width: 25%;
       width: calc(100% / 4); }
+      .grid--flex .grid__col.s-3 {
+        flex: 0 0 25%;
+        max-width: 25%; }
     .grid__col.s-push-3 {
       position: relative;
       left: 25%; }
@@ -212,6 +261,9 @@
     .grid__col.s-4 {
       width: 33.33333%;
       width: calc(100% / 3); }
+      .grid--flex .grid__col.s-4 {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%; }
     .grid__col.s-push-4 {
       position: relative;
       left: 33.33333%; }
@@ -221,6 +273,9 @@
     .grid__col.s-5 {
       width: 41.66667%;
       width: calc(100% / 2.4); }
+      .grid--flex .grid__col.s-5 {
+        flex: 0 0 41.66667%;
+        max-width: 41.66667%; }
     .grid__col.s-push-5 {
       position: relative;
       left: 41.66667%; }
@@ -230,6 +285,9 @@
     .grid__col.s-6 {
       width: 50%;
       width: calc(100% / 2); }
+      .grid--flex .grid__col.s-6 {
+        flex: 0 0 50%;
+        max-width: 50%; }
     .grid__col.s-push-6 {
       position: relative;
       left: 50%; }
@@ -239,6 +297,9 @@
     .grid__col.s-7 {
       width: 58.33333%;
       width: calc(100% / 1.71429); }
+      .grid--flex .grid__col.s-7 {
+        flex: 0 0 58.33333%;
+        max-width: 58.33333%; }
     .grid__col.s-push-7 {
       position: relative;
       left: 58.33333%; }
@@ -248,6 +309,9 @@
     .grid__col.s-8 {
       width: 66.66667%;
       width: calc(100% / 1.5); }
+      .grid--flex .grid__col.s-8 {
+        flex: 0 0 66.66667%;
+        max-width: 66.66667%; }
     .grid__col.s-push-8 {
       position: relative;
       left: 66.66667%; }
@@ -257,6 +321,9 @@
     .grid__col.s-9 {
       width: 75%;
       width: calc(100% / 1.33333); }
+      .grid--flex .grid__col.s-9 {
+        flex: 0 0 75%;
+        max-width: 75%; }
     .grid__col.s-push-9 {
       position: relative;
       left: 75%; }
@@ -266,6 +333,9 @@
     .grid__col.s-10 {
       width: 83.33333%;
       width: calc(100% / 1.2); }
+      .grid--flex .grid__col.s-10 {
+        flex: 0 0 83.33333%;
+        max-width: 83.33333%; }
     .grid__col.s-push-10 {
       position: relative;
       left: 83.33333%; }
@@ -275,6 +345,9 @@
     .grid__col.s-11 {
       width: 91.66667%;
       width: calc(100% / 1.09091); }
+      .grid--flex .grid__col.s-11 {
+        flex: 0 0 91.66667%;
+        max-width: 91.66667%; }
     .grid__col.s-push-11 {
       position: relative;
       left: 91.66667%; }
@@ -284,6 +357,9 @@
     .grid__col.s-12 {
       width: 100%;
       width: calc(100% / 1); }
+      .grid--flex .grid__col.s-12 {
+        flex: 0 0 100%;
+        max-width: 100%; }
     .grid__col.s-push-12 {
       position: relative;
       left: 100%; }
@@ -296,6 +372,9 @@
     .grid__col.m-1 {
       width: 8.33333%;
       width: calc(100% / 12); }
+      .grid--flex .grid__col.m-1 {
+        flex: 0 0 8.33333%;
+        max-width: 8.33333%; }
     .grid__col.m-push-1 {
       position: relative;
       left: 8.33333%; }
@@ -305,6 +384,9 @@
     .grid__col.m-2 {
       width: 16.66667%;
       width: calc(100% / 6); }
+      .grid--flex .grid__col.m-2 {
+        flex: 0 0 16.66667%;
+        max-width: 16.66667%; }
     .grid__col.m-push-2 {
       position: relative;
       left: 16.66667%; }
@@ -314,6 +396,9 @@
     .grid__col.m-3 {
       width: 25%;
       width: calc(100% / 4); }
+      .grid--flex .grid__col.m-3 {
+        flex: 0 0 25%;
+        max-width: 25%; }
     .grid__col.m-push-3 {
       position: relative;
       left: 25%; }
@@ -323,6 +408,9 @@
     .grid__col.m-4 {
       width: 33.33333%;
       width: calc(100% / 3); }
+      .grid--flex .grid__col.m-4 {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%; }
     .grid__col.m-push-4 {
       position: relative;
       left: 33.33333%; }
@@ -332,6 +420,9 @@
     .grid__col.m-5 {
       width: 41.66667%;
       width: calc(100% / 2.4); }
+      .grid--flex .grid__col.m-5 {
+        flex: 0 0 41.66667%;
+        max-width: 41.66667%; }
     .grid__col.m-push-5 {
       position: relative;
       left: 41.66667%; }
@@ -341,6 +432,9 @@
     .grid__col.m-6 {
       width: 50%;
       width: calc(100% / 2); }
+      .grid--flex .grid__col.m-6 {
+        flex: 0 0 50%;
+        max-width: 50%; }
     .grid__col.m-push-6 {
       position: relative;
       left: 50%; }
@@ -350,6 +444,9 @@
     .grid__col.m-7 {
       width: 58.33333%;
       width: calc(100% / 1.71429); }
+      .grid--flex .grid__col.m-7 {
+        flex: 0 0 58.33333%;
+        max-width: 58.33333%; }
     .grid__col.m-push-7 {
       position: relative;
       left: 58.33333%; }
@@ -359,6 +456,9 @@
     .grid__col.m-8 {
       width: 66.66667%;
       width: calc(100% / 1.5); }
+      .grid--flex .grid__col.m-8 {
+        flex: 0 0 66.66667%;
+        max-width: 66.66667%; }
     .grid__col.m-push-8 {
       position: relative;
       left: 66.66667%; }
@@ -368,6 +468,9 @@
     .grid__col.m-9 {
       width: 75%;
       width: calc(100% / 1.33333); }
+      .grid--flex .grid__col.m-9 {
+        flex: 0 0 75%;
+        max-width: 75%; }
     .grid__col.m-push-9 {
       position: relative;
       left: 75%; }
@@ -377,6 +480,9 @@
     .grid__col.m-10 {
       width: 83.33333%;
       width: calc(100% / 1.2); }
+      .grid--flex .grid__col.m-10 {
+        flex: 0 0 83.33333%;
+        max-width: 83.33333%; }
     .grid__col.m-push-10 {
       position: relative;
       left: 83.33333%; }
@@ -386,6 +492,9 @@
     .grid__col.m-11 {
       width: 91.66667%;
       width: calc(100% / 1.09091); }
+      .grid--flex .grid__col.m-11 {
+        flex: 0 0 91.66667%;
+        max-width: 91.66667%; }
     .grid__col.m-push-11 {
       position: relative;
       left: 91.66667%; }
@@ -395,6 +504,9 @@
     .grid__col.m-12 {
       width: 100%;
       width: calc(100% / 1); }
+      .grid--flex .grid__col.m-12 {
+        flex: 0 0 100%;
+        max-width: 100%; }
     .grid__col.m-push-12 {
       position: relative;
       left: 100%; }
@@ -407,6 +519,9 @@
     .grid__col.l-1 {
       width: 8.33333%;
       width: calc(100% / 12); }
+      .grid--flex .grid__col.l-1 {
+        flex: 0 0 8.33333%;
+        max-width: 8.33333%; }
     .grid__col.l-push-1 {
       position: relative;
       left: 8.33333%; }
@@ -416,6 +531,9 @@
     .grid__col.l-2 {
       width: 16.66667%;
       width: calc(100% / 6); }
+      .grid--flex .grid__col.l-2 {
+        flex: 0 0 16.66667%;
+        max-width: 16.66667%; }
     .grid__col.l-push-2 {
       position: relative;
       left: 16.66667%; }
@@ -425,6 +543,9 @@
     .grid__col.l-3 {
       width: 25%;
       width: calc(100% / 4); }
+      .grid--flex .grid__col.l-3 {
+        flex: 0 0 25%;
+        max-width: 25%; }
     .grid__col.l-push-3 {
       position: relative;
       left: 25%; }
@@ -434,6 +555,9 @@
     .grid__col.l-4 {
       width: 33.33333%;
       width: calc(100% / 3); }
+      .grid--flex .grid__col.l-4 {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%; }
     .grid__col.l-push-4 {
       position: relative;
       left: 33.33333%; }
@@ -443,6 +567,9 @@
     .grid__col.l-5 {
       width: 41.66667%;
       width: calc(100% / 2.4); }
+      .grid--flex .grid__col.l-5 {
+        flex: 0 0 41.66667%;
+        max-width: 41.66667%; }
     .grid__col.l-push-5 {
       position: relative;
       left: 41.66667%; }
@@ -452,6 +579,9 @@
     .grid__col.l-6 {
       width: 50%;
       width: calc(100% / 2); }
+      .grid--flex .grid__col.l-6 {
+        flex: 0 0 50%;
+        max-width: 50%; }
     .grid__col.l-push-6 {
       position: relative;
       left: 50%; }
@@ -461,6 +591,9 @@
     .grid__col.l-7 {
       width: 58.33333%;
       width: calc(100% / 1.71429); }
+      .grid--flex .grid__col.l-7 {
+        flex: 0 0 58.33333%;
+        max-width: 58.33333%; }
     .grid__col.l-push-7 {
       position: relative;
       left: 58.33333%; }
@@ -470,6 +603,9 @@
     .grid__col.l-8 {
       width: 66.66667%;
       width: calc(100% / 1.5); }
+      .grid--flex .grid__col.l-8 {
+        flex: 0 0 66.66667%;
+        max-width: 66.66667%; }
     .grid__col.l-push-8 {
       position: relative;
       left: 66.66667%; }
@@ -479,6 +615,9 @@
     .grid__col.l-9 {
       width: 75%;
       width: calc(100% / 1.33333); }
+      .grid--flex .grid__col.l-9 {
+        flex: 0 0 75%;
+        max-width: 75%; }
     .grid__col.l-push-9 {
       position: relative;
       left: 75%; }
@@ -488,6 +627,9 @@
     .grid__col.l-10 {
       width: 83.33333%;
       width: calc(100% / 1.2); }
+      .grid--flex .grid__col.l-10 {
+        flex: 0 0 83.33333%;
+        max-width: 83.33333%; }
     .grid__col.l-push-10 {
       position: relative;
       left: 83.33333%; }
@@ -497,6 +639,9 @@
     .grid__col.l-11 {
       width: 91.66667%;
       width: calc(100% / 1.09091); }
+      .grid--flex .grid__col.l-11 {
+        flex: 0 0 91.66667%;
+        max-width: 91.66667%; }
     .grid__col.l-push-11 {
       position: relative;
       left: 91.66667%; }
@@ -506,6 +651,9 @@
     .grid__col.l-12 {
       width: 100%;
       width: calc(100% / 1); }
+      .grid--flex .grid__col.l-12 {
+        flex: 0 0 100%;
+        max-width: 100%; }
     .grid__col.l-push-12 {
       position: relative;
       left: 100%; }
@@ -518,6 +666,9 @@
     .grid__col.xl-1 {
       width: 8.33333%;
       width: calc(100% / 12); }
+      .grid--flex .grid__col.xl-1 {
+        flex: 0 0 8.33333%;
+        max-width: 8.33333%; }
     .grid__col.xl-push-1 {
       position: relative;
       left: 8.33333%; }
@@ -527,6 +678,9 @@
     .grid__col.xl-2 {
       width: 16.66667%;
       width: calc(100% / 6); }
+      .grid--flex .grid__col.xl-2 {
+        flex: 0 0 16.66667%;
+        max-width: 16.66667%; }
     .grid__col.xl-push-2 {
       position: relative;
       left: 16.66667%; }
@@ -536,6 +690,9 @@
     .grid__col.xl-3 {
       width: 25%;
       width: calc(100% / 4); }
+      .grid--flex .grid__col.xl-3 {
+        flex: 0 0 25%;
+        max-width: 25%; }
     .grid__col.xl-push-3 {
       position: relative;
       left: 25%; }
@@ -545,6 +702,9 @@
     .grid__col.xl-4 {
       width: 33.33333%;
       width: calc(100% / 3); }
+      .grid--flex .grid__col.xl-4 {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%; }
     .grid__col.xl-push-4 {
       position: relative;
       left: 33.33333%; }
@@ -554,6 +714,9 @@
     .grid__col.xl-5 {
       width: 41.66667%;
       width: calc(100% / 2.4); }
+      .grid--flex .grid__col.xl-5 {
+        flex: 0 0 41.66667%;
+        max-width: 41.66667%; }
     .grid__col.xl-push-5 {
       position: relative;
       left: 41.66667%; }
@@ -563,6 +726,9 @@
     .grid__col.xl-6 {
       width: 50%;
       width: calc(100% / 2); }
+      .grid--flex .grid__col.xl-6 {
+        flex: 0 0 50%;
+        max-width: 50%; }
     .grid__col.xl-push-6 {
       position: relative;
       left: 50%; }
@@ -572,6 +738,9 @@
     .grid__col.xl-7 {
       width: 58.33333%;
       width: calc(100% / 1.71429); }
+      .grid--flex .grid__col.xl-7 {
+        flex: 0 0 58.33333%;
+        max-width: 58.33333%; }
     .grid__col.xl-push-7 {
       position: relative;
       left: 58.33333%; }
@@ -581,6 +750,9 @@
     .grid__col.xl-8 {
       width: 66.66667%;
       width: calc(100% / 1.5); }
+      .grid--flex .grid__col.xl-8 {
+        flex: 0 0 66.66667%;
+        max-width: 66.66667%; }
     .grid__col.xl-push-8 {
       position: relative;
       left: 66.66667%; }
@@ -590,6 +762,9 @@
     .grid__col.xl-9 {
       width: 75%;
       width: calc(100% / 1.33333); }
+      .grid--flex .grid__col.xl-9 {
+        flex: 0 0 75%;
+        max-width: 75%; }
     .grid__col.xl-push-9 {
       position: relative;
       left: 75%; }
@@ -599,6 +774,9 @@
     .grid__col.xl-10 {
       width: 83.33333%;
       width: calc(100% / 1.2); }
+      .grid--flex .grid__col.xl-10 {
+        flex: 0 0 83.33333%;
+        max-width: 83.33333%; }
     .grid__col.xl-push-10 {
       position: relative;
       left: 83.33333%; }
@@ -608,6 +786,9 @@
     .grid__col.xl-11 {
       width: 91.66667%;
       width: calc(100% / 1.09091); }
+      .grid--flex .grid__col.xl-11 {
+        flex: 0 0 91.66667%;
+        max-width: 91.66667%; }
     .grid__col.xl-push-11 {
       position: relative;
       left: 91.66667%; }
@@ -617,6 +798,9 @@
     .grid__col.xl-12 {
       width: 100%;
       width: calc(100% / 1); }
+      .grid--flex .grid__col.xl-12 {
+        flex: 0 0 100%;
+        max-width: 100%; }
     .grid__col.xl-push-12 {
       position: relative;
       left: 100%; }
@@ -629,6 +813,9 @@
     .grid__col.xxl-1 {
       width: 8.33333%;
       width: calc(100% / 12); }
+      .grid--flex .grid__col.xxl-1 {
+        flex: 0 0 8.33333%;
+        max-width: 8.33333%; }
     .grid__col.xxl-push-1 {
       position: relative;
       left: 8.33333%; }
@@ -638,6 +825,9 @@
     .grid__col.xxl-2 {
       width: 16.66667%;
       width: calc(100% / 6); }
+      .grid--flex .grid__col.xxl-2 {
+        flex: 0 0 16.66667%;
+        max-width: 16.66667%; }
     .grid__col.xxl-push-2 {
       position: relative;
       left: 16.66667%; }
@@ -647,6 +837,9 @@
     .grid__col.xxl-3 {
       width: 25%;
       width: calc(100% / 4); }
+      .grid--flex .grid__col.xxl-3 {
+        flex: 0 0 25%;
+        max-width: 25%; }
     .grid__col.xxl-push-3 {
       position: relative;
       left: 25%; }
@@ -656,6 +849,9 @@
     .grid__col.xxl-4 {
       width: 33.33333%;
       width: calc(100% / 3); }
+      .grid--flex .grid__col.xxl-4 {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%; }
     .grid__col.xxl-push-4 {
       position: relative;
       left: 33.33333%; }
@@ -665,6 +861,9 @@
     .grid__col.xxl-5 {
       width: 41.66667%;
       width: calc(100% / 2.4); }
+      .grid--flex .grid__col.xxl-5 {
+        flex: 0 0 41.66667%;
+        max-width: 41.66667%; }
     .grid__col.xxl-push-5 {
       position: relative;
       left: 41.66667%; }
@@ -674,6 +873,9 @@
     .grid__col.xxl-6 {
       width: 50%;
       width: calc(100% / 2); }
+      .grid--flex .grid__col.xxl-6 {
+        flex: 0 0 50%;
+        max-width: 50%; }
     .grid__col.xxl-push-6 {
       position: relative;
       left: 50%; }
@@ -683,6 +885,9 @@
     .grid__col.xxl-7 {
       width: 58.33333%;
       width: calc(100% / 1.71429); }
+      .grid--flex .grid__col.xxl-7 {
+        flex: 0 0 58.33333%;
+        max-width: 58.33333%; }
     .grid__col.xxl-push-7 {
       position: relative;
       left: 58.33333%; }
@@ -692,6 +897,9 @@
     .grid__col.xxl-8 {
       width: 66.66667%;
       width: calc(100% / 1.5); }
+      .grid--flex .grid__col.xxl-8 {
+        flex: 0 0 66.66667%;
+        max-width: 66.66667%; }
     .grid__col.xxl-push-8 {
       position: relative;
       left: 66.66667%; }
@@ -701,6 +909,9 @@
     .grid__col.xxl-9 {
       width: 75%;
       width: calc(100% / 1.33333); }
+      .grid--flex .grid__col.xxl-9 {
+        flex: 0 0 75%;
+        max-width: 75%; }
     .grid__col.xxl-push-9 {
       position: relative;
       left: 75%; }
@@ -710,6 +921,9 @@
     .grid__col.xxl-10 {
       width: 83.33333%;
       width: calc(100% / 1.2); }
+      .grid--flex .grid__col.xxl-10 {
+        flex: 0 0 83.33333%;
+        max-width: 83.33333%; }
     .grid__col.xxl-push-10 {
       position: relative;
       left: 83.33333%; }
@@ -719,6 +933,9 @@
     .grid__col.xxl-11 {
       width: 91.66667%;
       width: calc(100% / 1.09091); }
+      .grid--flex .grid__col.xxl-11 {
+        flex: 0 0 91.66667%;
+        max-width: 91.66667%; }
     .grid__col.xxl-push-11 {
       position: relative;
       left: 91.66667%; }
@@ -728,6 +945,9 @@
     .grid__col.xxl-12 {
       width: 100%;
       width: calc(100% / 1); }
+      .grid--flex .grid__col.xxl-12 {
+        flex: 0 0 100%;
+        max-width: 100%; }
     .grid__col.xxl-push-12 {
       position: relative;
       left: 100%; }
@@ -740,8 +960,20 @@
     float: left;
     display: block; }
 
-.grid__col--flex {
-  display: flex; }
+.u-debug-grid .grid {
+  position: relative; }
+  .u-debug-grid .grid:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 20px;
+    bottom: 0;
+    content: "";
+    background-clip: content-box;
+    background-color: rgba(0, 0, 0, 0.05); }
+
+.u-debug-grid .grid__col {
+  background-color: rgba(0, 0, 0, 0.05); }
 
 *,
 *::before,
@@ -755,4 +987,23 @@ html {
 
 body {
   font-size: 16px;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  color: #4e4e4e;
+  margin: 0;
+  padding: 0; }
+
+section {
+  padding: 0 0 2rem 0;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #F3F3F3; }
+
+p {
+  margin: 0 0 20px 0; }
+
+.fill {
+  background-color: #BDBEC3;
+  padding: 20px;
+  width: 100%;
+  height: 100%; }
+  .fill.alpha {
+    background-color: #AAABB3; }

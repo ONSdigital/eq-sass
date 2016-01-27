@@ -8,24 +8,29 @@
   }
   margin-left: -$grid-gutters;
 }
+
 .grid--float {
   letter-spacing: 0;
 }
+
 .grid--center {
   text-align: center;
   .grid__col {
     text-align: left;
   }
 }
+
 .grid--center-all {
   text-align: center;
 }
+
 .grid--reverse {
   direction: rtl;
   .grid__col {
     direction: ltr;
   }
 }
+
 .grid--spaced {
   .grid__col {
     margin-bottom: $grid-gutters;
@@ -36,11 +41,13 @@
     }
   }
 }
+
 .grid--align-mid {
   .grid__col {
     vertical-align: middle;
   }
 }
+
 .grid--stagger-align {
   .grid__col:nth-of-type(1n) {
     text-align: right;
@@ -49,18 +56,21 @@
     text-align: left;
   }
 }
+
 .grid--tight {
-  margin-left: -1em;
+  margin-left: -$grid-gutters/2;
   .grid__col {
-    padding-left: 1em;
+    padding-left: $grid-gutters/2;
   }
 }
+
 .grid--gutterless {
   margin-left: 0;
   .grid__col {
     padding-left: 0;
   }
 }
+
 .grid--pixelgutter {
   margin-left: 1px;
   .grid__col {
@@ -68,18 +78,25 @@
     margin-bottom: 1px;
   }
 }
+
 .grid--flex {
   flex-wrap: wrap;
+  flex-flow: row wrap;
   display: flex;
+  .grid__col {
+    display: flex;
+  }
   &.grid--center {
     justify-content: center;
   }
 }
+
 .grid__col {
   display: inline-block;
   width: 100%;
   vertical-align: top;
   box-sizing: border-box;
+  background-clip: content-box;
   @if $grid-use-letter-spacing-hack {
     letter-spacing: normal;
     word-spacing: normal;
@@ -97,6 +114,10 @@
           &.#{$selector} {
             width: $width;
             width: calc(100% / #{$grid-cols / $col});
+            .grid--flex & {
+              flex: 0 0 $width;
+              max-width: $width;
+            }
           }
         }
         @else {
@@ -126,6 +147,42 @@
     display: block;
   }
 }
-.grid__col--flex {
-  display: flex;
+
+@mixin grid-debug {
+  position: relative;
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: $grid-gutters;
+    bottom: 0;
+    content: "";
+    background-clip: content-box;
+    background-color: rgba(0,0,0, .05);
+  }
+}
+@mixin grid-debug-col {
+  .grid__col {
+    background-clip: content-box;
+    background-color: rgba(0,0,0, .05);
+  }
+}
+
+.u-debug-grid {
+  .grid {
+    position: relative;
+    &:before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: $grid-gutters;
+      bottom: 0;
+      content: "";
+      background-clip: content-box;
+      background-color: rgba(0,0,0, .05);
+    }
+  }
+  .grid__col {
+    background-color: rgba(0,0,0, .05);
+  }
 }
