@@ -1,5 +1,13 @@
 @mixin mq($from: none, $to: none) {
 
+  @if $from != "none" and type-of($from) == "string" {
+    $from: get-bp-width($from);
+  }
+
+  @if $to != "none" and type-of($to) == "string" {
+    $to: get-bp-width($to);
+  }
+
 	@if $responsive {
 
 		@if $from == none {
