@@ -121,7 +121,8 @@
           }
         }
         @else {
-          @if ($size == $grid-bp-fixed) {
+
+          @if $size == $grid-bp-fixed {
             &.#{$selector} {
               width: $width;
             }

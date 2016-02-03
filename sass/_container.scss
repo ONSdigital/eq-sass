@@ -3,4 +3,7 @@
 	margin: 0 auto;
 	padding: 0 $grid-gutters;
   box-sizing: border-box;
+	@if not $responsive {
+		width: $grid-max-width;
+	}
 }
