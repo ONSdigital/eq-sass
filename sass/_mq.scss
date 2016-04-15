@@ -23,7 +23,7 @@
     }
   }
   @else {
-    @if (strip-unit($from) >= strip-unit($grid-bp-fixed)) {
+    @if (strip-unit($from) <= strip-unit($grid-bp-fixed)) {
       @content;
     }
   }
@@ -62,6 +62,5 @@
   @if type-of($number) == 'number' and not unitless($number) {
     @return $number / ($number * 0 + 1);
   }
-
   @return $number;
 }

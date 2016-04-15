@@ -110,22 +110,13 @@
       @for $col from 1 through $grid-cols {
         $selector: #{$bp}-#{$col};
         $width: percentage($col / $grid-cols);
-        @if $responsive {
-          &.#{$selector} {
-            width: $width;
-            width: calc(100% / #{$grid-cols / $col});
-            .grid--flex & {
-              flex: 0 0 $width;
-              max-width: $width;
-            }
-          }
-        }
-        @else {
-
-          @if $size == $grid-bp-fixed {
-            &.#{$selector} {
-              width: $width;
-            }
+        
+        &.#{$selector} {
+          width: $width;
+          width: calc(100% / #{$grid-cols / $col});
+          .grid--flex & {
+            flex: 0 0 $width;
+            max-width: $width;
           }
         }
         &.#{$bp}-push-#{$col} {
@@ -136,6 +127,7 @@
           position: relative;
           left: 0-$width;
         }
+
       }
       &.#{$bp}-nopull,
       &.#{$bp}-nopush {
