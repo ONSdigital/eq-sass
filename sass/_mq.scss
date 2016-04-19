@@ -1,10 +1,12 @@
 @mixin mq($from: none, $to: none) {
-  @if $from != "none" and type-of($from) == "string" {
+  @if $from != none and type-of($from) == "string" {
     $from: get-bp-width($from);
   }
-  @if $to != "none" and type-of($to) == "string" {
+
+  @if $to != none and type-of($to) == "string" {
     $to: get-bp-width($to);
   }
+  
   @if $responsive {
     @if $from == none {
       @media only screen and (max-width: $to) {
@@ -28,11 +30,13 @@
     }
   }
 }
+
 @mixin fixed-width() {
   @if not $responsive {
     @content;
   }
 }
+
 @mixin ie8 {
   @if not $responsive {
     .lt-ie9 & {
@@ -40,6 +44,7 @@
     }
   }
 }
+
 @mixin ie7 {
   @if not $responsive {
     .lt-ie8 & {
@@ -47,6 +52,7 @@
     }
   }
 }
+
 @function get-bp-width($name, $breakpoints: $grid-bp) {
   @if map-has-key($breakpoints, $name) {
     @return map-get($breakpoints, $name);
@@ -63,4 +69,20 @@
     @return $number / ($number * 0 + 1);
   }
   @return $number;
+}
+
+@mixin bp-suffix($class, $original: true, $breakpoints: $grid-bp) {
+  @if $original {
+    .#{$class} {
+      @content;
+    }
+  }
+
+  @each $breakpoint, $size in $breakpoints {
+    @include mq($breakpoint) {
+      .#{$class}\@#{$breakpoint} {
+        @content;
+      }
+    }
+  }
 }

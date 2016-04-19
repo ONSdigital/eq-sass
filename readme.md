@@ -90,10 +90,10 @@ This example will give a two column grid on viewports above 740px:
 ```html
 <div class="container">
   <div class="grid">
-    <div class="grid__col m-6">
+    <div class="grid__col col-6@m">
       <p>Left column</p>
     </div>
-    <div class="grid__col m-6">
+    <div class="grid__col col-6@m">
       <p>Right column</p>
     </div>
   </div>
@@ -108,16 +108,16 @@ Being percentage-based allows easy nesting of columns. In the example below, we 
 
 ```html
 <div class="grid">
-  <div class="grid__col s-6">
+  <div class="grid__col col-6@s">
     <p>This column is one-half at screen sizes above the small breakpoint. Nulla vitae elit libero, a pharetra augue. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui.</p>
   </div>
-  <div class="grid__col s-6">
+  <div class="grid__col col-6@s">
     <p>This column is also one-half but has a sub-grid of another two columns of half-width.</p>
     <div class="grid">
-      <div class="grid__col s-6">
+      <div class="grid__col col-6@s">
         <p>Donec id elit non mi porta gravida at eget metus.</p>
       </div>
-      <div class="grid__col s-6">
+      <div class="grid__col col-6@s">
         <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
       </div>
     </div>
@@ -131,10 +131,10 @@ A reversed grid allows you change the source order of the markup and still keep 
 
 ```html
 <div class="grid  grid--reverse">
-  <div class="grid__col m-4">
+  <div class="grid__col col-4@m">
     <p>1st in the DOM</p>
   </div>
-  <div class="grid__col m-8">
+  <div class="grid__col col-8@m">
     <p>2nd in the DOM</p>
   </div>
 </div>
@@ -146,13 +146,13 @@ Columns can be pushed or pulled in a particular direction at a specified breakpo
 
 ```html
 <div class="grid">
-  <div class="grid__col m-3 m-push-3 l-nopush">
+  <div class="grid__col col-3@m push-3@m nopush@l">
     <p>Column</p>
   </div>
-  <div class="grid__col m-3 m-push-3">
+  <div class="grid__col col-3@m push-3@m">
     <p>Column</p>
   </div>
-  <div class="grid__col m-3 m-push-3">
+  <div class="grid__col col-3@m push-3@m">
     <p>Column</p>
   </div>
 </div>
@@ -166,12 +166,12 @@ __Note: To wrap a left column around a right column, the right column must come 
 
 ```html
 <div class="grid grid--reverse">
-  <div class="grid__col m-3 m-fr">
+  <div class="grid__col col-3@m col-f@mr">
     <div class="avatar">
       <img src="http://imgsrc.me/200x200/4EA6B8/f3f3f3" width="200" height="200" class="avatar__img">
     </div>
   </div>
-  <div class="grid__col m-12 l-3-4">
+  <div class="grid__col col-1@m2">
     <div>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam quis risus eget urna mollis ornare vel eu leo. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum. Nullam quis risus eget urna mollis ornare vel eu leo. Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Nulla vitae elit libero, a pharetra augue. Curabitur blandit tempus porttitor.</div>
   </div>
 </div>
@@ -185,10 +185,10 @@ The grid can make use of CSS3 capabilities of modern browsers to solve layout pr
 
 ```html
 <div class="grid  grid--flex">
-  <div class="grid__col grid__flex m-6">
+  <div class="grid__col grid__flex col-6@m">
     <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
   </div>
-  <div class="grid__col grid__flex m-6">
+  <div class="grid__col grid__flex col-6@m">
     <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla. Curabitur blandit tempus porttitor. Maecenas faucibus mollis interdum.</p>
   </div>
 </div>

@@ -2,8 +2,7 @@
   box-sizing: border-box;
   @if $grid-use-letter-spacing-hack {
     letter-spacing: -0.32em;
-  }
-  @else {
+  } @else {
     font-size: 0;
   }
   margin-left: -$grid-gutters;
@@ -100,45 +99,45 @@
   @if $grid-use-letter-spacing-hack {
     letter-spacing: normal;
     word-spacing: normal;
-  }
-  @else {
+  } @else {
     font-size: initial;
   }
   padding-left: $grid-gutters;
-  @each $bp, $size in $grid-bp {
-    @include mq($from: $size) {
-      @for $col from 1 through $grid-cols {
-        $selector: #{$bp}-#{$col};
-        $width: percentage($col / $grid-cols);
-        
-        &.#{$selector} {
-          width: $width;
-          width: calc(100% / #{$grid-cols / $col});
-          .grid--flex & {
-            flex: 0 0 $width;
-            max-width: $width;
-          }
-        }
-        &.#{$bp}-push-#{$col} {
-          position: relative;
-          left: $width;
-        }
-        &.#{$bp}-pull-#{$col} {
-          position: relative;
-          left: 0-$width;
-        }
-
-      }
-      &.#{$bp}-nopull,
-      &.#{$bp}-nopush {
-        left: 0;
-      }
-    }
-  }
   .grid--float & {
     float: left;
     display: block;
   }
+}
+
+@for $column from 1 through $grid-cols {
+  $width: percentage($column / $grid-cols);
+
+  @include bp-suffix("col-#{$column}", false) {
+    width: $width;
+    width: calc(100% / #{$grid-cols / $column});
+    .grid--flex & {
+      flex: 0 0 $width;
+      max-width: $width;
+    }
+  }
+
+  @include bp-suffix("push-#{$column}", false) {
+    position: relative;
+    left: $width;
+  }
+
+  @include bp-suffix("pull-#{$column}", false) {
+    position: relative;
+    left: 0-$width;
+  }
+}
+
+@include bp-suffix("nopull-", false) {
+  left: 0;
+}
+
+@include bp-suffix("nopush-", false) {
+  left: 0;
 }
 
 @mixin grid-debug {
@@ -154,6 +153,7 @@
     background-color: rgba(0,0,0, .05);
   }
 }
+
 @mixin grid-debug-col {
   .grid__col {
     background-clip: content-box;
